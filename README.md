@@ -9,7 +9,7 @@ Projektet er udviklet som semesterprojekt i Webdev E2026 og er en fiktiv case.
 | | |
 | --- | --- |
 | Live demo | `SOON` |
-| GitHub-repository | `https://github.com/Dontosquare/webDev-semesterprojekt-e2026` |
+| GitHub-repository | `[https://github.com/Dontosquare/webDev-semesterprojekt-e2026]` |
 | Rapport | `SOON` |
 
 ## Gruppemedlemmer
