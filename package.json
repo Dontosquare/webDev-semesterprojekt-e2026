@@ -1,0 +1,30 @@
+{
+  "name": "gamecreators-webshop",
+  "version": "1.0.0",
+  "description": "Webshop og marketingplatform for GameCreators ApS' håndholdte spillekonsoller. Kunder kan oprette en konto, gennemse produktet, lægge en konsol i kurv og gennemføre en bestilling uden betaling. Administratoren styrer produkter, ordrer og brugere i et admin-panel.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node --watch app.js"
+  },
+  "author": "Joachim Pors Knudsen",
+  "license": "ISC",
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^18.0.8",
+    "express": "^5.3.0",
+    "express-handlebars": "^8.0.3",
+    "express-session": "^1.19.0",
+    "multer": "^2.4.0",
+    "mysql2": "^3.24.6",
+    "nodemailer": "^10.1.1",
+    "sequelize": "^6.37.8",
+    "sharp": "^0.35.5"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.6.5"
+  }
+}
