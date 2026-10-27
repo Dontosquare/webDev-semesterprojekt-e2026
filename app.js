@@ -10,7 +10,6 @@ app.get('/', (req, res) => {
 
 // vores port er bare vores localhost halløj
 // det er bare en lokalserver lige nu indtil vi løser hosting
-
 app.listen(PORT, () => {
-  console.log(`Server kører på http://localhost:${PORT}`);
+  console.log(`Server kører`);
 });
