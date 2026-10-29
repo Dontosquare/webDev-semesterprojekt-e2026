@@ -23,8 +23,8 @@ const getProductById = async (req, res) => {
 
 const createProduct = async (req, res) => {
     try {
-        const { name, sku, price, brand, variation, category, description, imagepath } = req.body;
-        const product = await Product.create({ name, sku, price, brand, variation, category, description, imagepath })
+        const { name, sku, price, brand, variation, category, description, imagePath } = req.body;
+        const product = await Product.create({ name, sku, price, brand, variation, category, description, imagePath })
         res.status(201).json(product)
     } catch (error) {
         res.status(400).json({ error: error.message })
@@ -37,8 +37,8 @@ const updateProduct = async (req, res) => {
         if (!product) {
             return res.status(404).json({ error: "Product not found" })
         }
-        const { name, sku, price, brand, variation, category, description, imagepath } = req.body;
-        await product.update({ name, sku, price, brand, variation, category, description, imagepath })
+        const { name, sku, price, brand, variation, category, description, imagePath } = req.body;
+        await product.update({ name, sku, price, brand, variation, category, description, imagePath })
         res.json(product)
     } catch (error) {
         res.status(400).json({ error: error.message })

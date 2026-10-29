@@ -7,7 +7,7 @@ const pageRoutes = require('./src/routes/pages');
 
 const app = express();
 
-// Opretter Handlebars-konfiguration med .hbs som filendelse
+
 app.use(express.json());
 
 const hbs = create({ extname: '.hbs' });
