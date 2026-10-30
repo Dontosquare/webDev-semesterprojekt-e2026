@@ -2,8 +2,8 @@ const { Product } = require("../models")
 
 const getAllProducts = async (req, res) => {
     try {
-        const products = await Product.findAll()
-        res.json(products)
+        const products = await Product.findAll({ raw: true})
+        res.render("products", { products })
     } catch (error) {
         res.status(500).json({ error: error.message })
     }
