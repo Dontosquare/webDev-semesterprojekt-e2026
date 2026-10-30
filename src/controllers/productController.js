@@ -11,11 +11,11 @@ const getAllProducts = async (req, res) => {
 
 const getProductById = async (req, res) => {
     try {
-        const product = await Product.findByPk(req.params.id)
+        const product = await Product.findByPk(req.params.id, { raw: true })
         if (!product) {
             return res.status(404).json({ error: "Product not found" })
         }
-        res.json(product)
+        res.render("product", { product })
     } catch (error) {
         res.status(500).json({ error: error.message })
     }

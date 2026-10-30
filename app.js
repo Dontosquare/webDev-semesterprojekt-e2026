@@ -4,6 +4,7 @@ require('dotenv').config();
 const { create } = require('express-handlebars');
 const express = require('express');
 const pageRoutes = require('./src/routes/pages');
+const productPages = require("./src/routes/productRoutes")
 
 const app = express();
 
@@ -20,7 +21,7 @@ app.set('views', 'src/views');
 
 app.use('/', pageRoutes);
 
-app.use("/products", require("./src/routes/productRoutes"))
+app.use("/products", productPages)
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
