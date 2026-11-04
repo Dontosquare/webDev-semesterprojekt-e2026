@@ -21,9 +21,9 @@ app.set('views', 'src/views');
 
 app.use('/', pageRoutes);
 
-app.use("/products", productPages)
+app.use("/", productPages)
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
-  console.log('Server kører');
+  console.log(`Server kører på http://localhost:${PORT}`);
 });
