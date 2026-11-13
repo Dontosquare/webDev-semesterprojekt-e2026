@@ -5,6 +5,7 @@ const { create } = require('express-handlebars');
 const express = require('express');
 const pageRoutes = require('./src/routes/pages');
 const productPages = require("./src/routes/productRoutes")
+const authRoutes = require("./src/routes/auth")
 
 const app = express();
 
@@ -25,6 +26,9 @@ app.set('views', 'src/views');
 app.use('/', pageRoutes);
 
 app.use("/", productPages)
+
+app.use("/", authRoutes);
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
