@@ -9,6 +9,9 @@ const productPages = require("./src/routes/productRoutes")
 const app = express();
 
 
+const path = require('path');
+app.use(express.static(path.join(__dirname, 'src/assets')));
+
 app.use(express.json());
 
 const hbs = create({ extname: '.hbs' });

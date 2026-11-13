@@ -4,9 +4,10 @@
   "description": "Webshop og marketingplatform for GameCreators ApS' håndholdte spillekonsoller. Kunder kan oprette en konto, gennemse produktet, lægge en konsol i kurv og gennemføre en bestilling uden betaling. Administratoren styrer produkter, ordrer og brugere i et admin-panel.",
   "main": "app.js",
   "scripts": {
+    "devStart": "nodemon app.js",
     "start": "node app.js",
     "dev": "node --watch app.js",
-    "devStart": "nodemon app.js"
+    "sass": "sass src/assets/SCSS/style.scss src/assets/css/style.css --watch"
   },
   "author": "Joachim Pors Knudsen",
   "license": "ISC",
@@ -22,6 +23,7 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.14",
+    "sass": "^1.108.2",
     "sequelize-cli": "^6.6.5"
   }
 }

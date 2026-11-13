@@ -1,23 +1,10 @@
+
+@use 'variables' as *;
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-
-/* VARIABLER */
-$color-macintosh-beige: #F3E3D1;
-$color-brick-orange: #D27C6A;
-$color-nintendo-red: #8C2C2B;
-$color-trident-teal: #1E8089;
-$color-ghost-white: #FFFFFF;
-$color-batman-black: #0F0F12;
-
-$font-montserrat: "montserrat";
-$font-lato: "lato";
-
-/* MIXINS */
-@mixin box-shadow {
-  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 6px 0 rgba(0, 0, 0, 0.19);
 }
 
 h2 {
