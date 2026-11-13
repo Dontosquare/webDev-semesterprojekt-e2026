@@ -1,41 +1,26 @@
-const express = require("express");
-const session = require("express-session");
-const User = require("./models/User");
+const bcrypt = require("bcrypt");
+const { User } = require("../models/");
 
-const app = express();
+const register = async (req, res) => {
+  try {
+    const { email, password } = req.body;
 
-app.use(express.urlencoded({ extended: true })); 
-app.use(session({ secret: "test", resave: false, saveUninitialized: false }));
+    const exisitingUser = await User.findOne({ where: { email }});
+    if (exisitingUser) {
+      // Ændre så den render rigtig side
+      return res.status(409).render("home", { error: "Email er allerede i brug", email})
+    }
 
-app.get("/login", (req, res) => {
-  res.send(`
-    <form method="POST" action="/login">
-      <input name="email" placeholder="Email" />
-      <input name="password" type="password" placeholder="Password" />
-      <button>Log in</button>
-    </form>
-  `);
-});
+    const saltRounds = 10;
+    const hashedPassword = await bcrypt.hash(password, saltRounds)
 
-app.post("/login", async (req, res) => {
-  const { email, password } = req.body;
+    await User.create( { email, hashedPassword : hashedPassword})
+    // Også ændre på redirect her
+    res.redirect("/home")
 
-  const user = await User.findOne({ where: { email, password } });
-
-  if (!user) {
-    return res.send("Wrong email or password");
+  } catch (error) {
+    res.status(500).json({ error: error.message })
   }
+}
 
-  req.session.userId = user.id;
-  res.redirect("/dashboard");
-});
-
-// 3. A protected page
-app.get("/dashboard", (req, res) => {
-  if (!req.session.userId) {
-    return res.redirect("/login");
-  }
-  res.send("You're logged in!");
-});
-
-app.listen(3000);
+module.exports = { register }
