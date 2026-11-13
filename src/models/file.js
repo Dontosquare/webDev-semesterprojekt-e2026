@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   File.init({
-    name: DataTypes.STRING,
+    name: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'File',
