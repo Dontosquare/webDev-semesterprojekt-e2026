@@ -1,0 +1,39 @@
+<header>
+  <a href="/" class="logo">Gamecreators</a>
+  <nav>
+    <a href="/produkter">Produkter</a>
+    <a href="/kontakt">Kontakt</a>
+    <a href="/kurv">Kurv</a>
+    <a href="/login">Login</a>
+  </nav>
+</header>
+
+<style lang="scss" scoped>
+@import '../assets/main.scss';
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: $color-macintosh-beige; /* Macintosh Beige */
+  }
+
+  .logo {
+    font-family: "montserrat", sans-serif;
+    font-size: 1.5rem;
+    color: #8c2c2b; /* Nintendo Red */
+    text-decoration: none;
+  }
+
+  nav a {
+    margin-left: 1rem;
+    font-family: "lato", sans-serif;
+    color: #1e8089; /* Trident Teal */
+    text-decoration: none;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+</style>
