@@ -1,1 +1,16 @@
-<h1>Dette er vores kontakt side</h1>
+<div class="contact-card">
+  <h1>Kontakt os</h1>
+  <p>Send os en besked via formularen.</p>
+  {{#if success}}<div class="success" role="status">{{success}}</div>{{/if}}
+  {{#if error}}<div class="error" role="alert">{{error}}</div>{{/if}}
+  <form action="/send" method="POST">
+    <div class="honeypot" aria-hidden="true"><label for="website">Website</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
+    <label for="name">Navn</label>
+    <input id="name" name="name" value="{{form.name}}" minlength="2" maxlength="100" required>
+    <label for="email">E-mail</label>
+    <input type="email" id="email" name="email" value="{{form.email}}" maxlength="254" required>
+    <label for="message">Besked</label>
+    <textarea id="message" name="message" rows="6" minlength="10" maxlength="5000" required>{{form.message}}</textarea>
+    <button type="submit">Send besked</button>
+  </form>
+</div>
