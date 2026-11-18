@@ -34,35 +34,26 @@ h2 {
 nav {
   background-color: #8C2C2B;
   display: flex;
+  justify-content: center;
   align-items: center;
-  padding: 1rem 2rem;
-  color: #1E8089;
-}
-
-.velkommen {
-  font-family: "montserrat";
-  color: #1E8089;
-  font-size: 2.44rem;
-  font-weight: 400;
-  text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  filter: drop-shadow(0px 4px 4px rgba(15, 15, 18, 0.25));
 }
 
 .logo {
-  font-family: "montserrat", sans-serif;
+  font-family: "montserrat";
   font-size: 1.5rem;
-  color: #8c2c2b; /* Nintendo Red */
   text-decoration: none;
+  color: #F3E3D1;
 }
 
-nav a {
-  margin-left: 1rem;
-  font-family: "lato", sans-serif;
-  color: #1e8089; /* Trident Teal */
+.nav-link {
+  display: flex;
+  justify-content: end;
+  font-family: "montserrat";
+  color: #F3E3D1;
   text-decoration: none;
-}
-
-nav a:hover {
-  text-decoration: underline;
+  margin-right: 3rem;
+  font-size: 1.2rem;
 }/*# sourceMappingURL=style.css.map */
