@@ -1,9 +1,34 @@
 const { Product } = require("../models")
+const { Op } = require("sequelize")
 
 const getAllProducts = async (req, res) => {
+
+    const page = Number(req.query.page) || 1
+    const pageSize = Number(req.query.pageSize) || 10
+    const search = req.query.search
+
     try {
-        const products = await Product.findAll({ raw: true})
-        res.render("products", { products })
+        where = {}
+        if (search) {
+            where = { name: { [Op.substring]: search } }
+        }
+
+        const { count, rows } = await Product.findAndCountAll({
+            where,
+            order: [["createdAt", "DESC"]],
+            limit: pageSize,
+            offset: (page - 1) * pageSize,
+            raw: true,
+        })
+        const totalPages = Math.ceil(count / pageSize)
+
+        res.render("products", {
+            products: rows,
+            page,
+            pageSize,
+            totalItems: count,
+            totalPages,
+        })
     } catch (error) {
         res.status(500).json({ error: error.message })
     }
