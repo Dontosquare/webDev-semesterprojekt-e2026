@@ -1,5 +1,16 @@
 <h1>Dette er vores products</h1>
 
-{{#each products}}
-<p>{{name}}</p>
-{{/each}}
+<div class="product-card">
+    {{#each products}}
+    <!-- Change path for src -->
+    <img src="/src/assets/images/" alt="{{name}}">
+    <p>{{price}}.- DKK</p>
+    <p>{{name}}</p>
+    <p>{{description}}</p>
+
+    <div>
+        <p>På lager 30+ stk.</p>
+        <button>Tilføj til kurv</button>
+    </div>
+    {{/each}}
+</div>
