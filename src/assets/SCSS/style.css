@@ -34,11 +34,19 @@ h2 {
 nav {
   background-color: #8C2C2B;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 2rem;
+  justify-content: space-between;
   padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   filter: drop-shadow(0px 4px 4px rgba(15, 15, 18, 0.25));
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .logo {
@@ -46,6 +54,13 @@ nav {
   font-size: 1.5rem;
   text-decoration: none;
   color: #F3E3D1;
+}
+
+.nav-link-container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 2rem;
 }
 
 .nav-link {
@@ -56,4 +71,33 @@ nav {
   text-decoration: none;
   margin-right: 3rem;
   font-size: 1.2rem;
+}
+
+.header__input__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 20rem;
+  border: none;
+}
+
+.header__input::-moz-placeholder {
+  font-family: "montserrat";
+  color: #0F0F12;
+  padding-left: 1rem;
+}
+
+.header__input::placeholder {
+  font-family: "montserrat";
+  color: #0F0F12;
+  padding-left: 1rem;
 }/*# sourceMappingURL=style.css.map */
