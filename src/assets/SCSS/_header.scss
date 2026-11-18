@@ -3,14 +3,14 @@
 @use 'base' as *;
 
 nav {
-    background-color: $color-macintosh-beige;
+    background-color: $color-nintendo-red;
     display: flex;
     align-items: center;
     padding: 1rem 2rem;
     color: $color-trident-teal;
   }
 
-.Velkommen {
+.velkommen {
     font-family: $font-montserrat;
     color: $color-trident-teal;
     font-size: 2.44rem;

@@ -32,14 +32,14 @@ h2 {
   }
 }
 nav {
-  background-color: #F3E3D1;
+  background-color: #8C2C2B;
   display: flex;
   align-items: center;
   padding: 1rem 2rem;
   color: #1E8089;
 }
 
-.Velkommen {
+.velkommen {
   font-family: "montserrat";
   color: #1E8089;
   font-size: 2.44rem;
@@ -65,6 +65,4 @@ nav a {
 
 nav a:hover {
   text-decoration: underline;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
