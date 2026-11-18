@@ -23,7 +23,31 @@
                     </div>
                 </nav>
             </header>
+            
+             <!-- Login popup -->
+            <button onclick="openPopup()">test Login</button>
+
+            <div id="loginPopup" class="popup">
+                <div class="popup-content">
+                  <h1>Login?</h1>
+                  <button class="close-button" onclick="closePopup()">Luk</button>
+                </div>
+            </div>
         </main>
+          
+        <script>
+          let loginPopup = document.getElementById('loginPopup');
+          loginPopup.style.display = 'none';
+
+          function openPopup() {
+            loginPopup.style.display = 'flex';
+          }
+
+          function closePopup() {
+            loginPopup.style.display = 'none';
+          }
+        </script>
+
     </body>
 </html>
 
