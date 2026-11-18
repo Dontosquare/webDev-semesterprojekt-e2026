@@ -58,11 +58,16 @@ nav {
   padding-top: 1rem;
   padding-bottom: 1rem;
   padding-right: 20rem;
+  padding-left: 1rem;
   border: none;
 }
 
 .header__input::placeholder {
   font-family: $font-montserrat;
   color: $color-batman-black;
-  padding-left: 1rem;
+}
+
+.header__input:focus {
+  outline: none;
+  
 }

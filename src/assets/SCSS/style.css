@@ -87,17 +87,20 @@ nav {
   padding-top: 1rem;
   padding-bottom: 1rem;
   padding-right: 20rem;
+  padding-left: 1rem;
   border: none;
 }
 
 .header__input::-moz-placeholder {
   font-family: "montserrat";
   color: #0F0F12;
-  padding-left: 1rem;
 }
 
 .header__input::placeholder {
   font-family: "montserrat";
   color: #0F0F12;
-  padding-left: 1rem;
+}
+
+.header__input:focus {
+  outline: none;
 }/*# sourceMappingURL=style.css.map */
