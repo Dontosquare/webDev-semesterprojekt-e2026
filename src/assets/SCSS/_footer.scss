@@ -9,11 +9,34 @@
     color: $color-macintosh-beige;
     padding-left: 2rem;
     padding-right: 2rem;
+    padding-top: 2rem;
+  }
+
+p {
+    font-family: $font-montserrat;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    max-width: 15rem;
+  }
+
+.footer__copyright {
+    font-family: $font-montserrat;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    max-width: 15rem;
+  }
+
+.footer__logo {
+    display: flex;
+    align-items: center;
+    width: 8%;
+    height: 8%;
+    padding-top: 8rem;
   }
 
 .footer__headline {
   font-family: $font-montserrat;
-  font-size: 1.2rem;
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
