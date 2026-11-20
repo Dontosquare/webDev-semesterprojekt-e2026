@@ -1,0 +1,101 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'base' as *;
+
+nav {
+    background-color: $color-nintendo-red;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    filter: $shadow-soft;
+  }
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 20rem;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+  }
+
+.nav-link-container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  display: flex;
+  justify-content: end;
+  font-family: $font-montserrat;
+  color: $color-macintosh-beige;
+  text-decoration: none;
+  margin-right: 3rem;
+  font-size: 1.2rem;
+}
+
+.header__input__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 20rem;
+  padding-left: 1rem;
+  border: none;
+}
+
+.header__input::placeholder {
+  font-family: $font-montserrat;
+  color: $color-batman-black;
+}
+
+.header__input:focus {
+  outline: none;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    .popup-content {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      text-align: center;
+      position: relative;
+    }
+    .close-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #8c2c2b; /* Nintendo Red */
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+    }
+  }

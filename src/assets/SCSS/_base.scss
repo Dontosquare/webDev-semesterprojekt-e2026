@@ -1,0 +1,37 @@
+
+@use 'variables' as *;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-family: $font-montserrat;
+  color: $color-batman-black;
+  -webkit-text-stroke: 0.1rem $color-batman-black;
+  font-size: 2.44rem;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 601px) {
+  h2 {
+    text-align: left;
+    padding-left: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  h2 {
+    font-size: 3rem;
+    text-align: left;
+    padding-left: 15rem;
+    padding-right: 15rem;
+    margin-top: 4rem;
+    margin-bottom: 2.5rem;
+  }
+}

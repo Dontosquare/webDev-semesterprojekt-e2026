@@ -1,15 +1,34 @@
 require('dotenv').config();
+
+// Importerer Express Handlebars
+const { create } = require('express-handlebars');
 const express = require('express');
+const pageRoutes = require('./src/routes/pages');
+const productPages = require("./src/routes/productRoutes")
+const authRoutes = require("./src/routes/auth")
 
 const app = express();
-// her er vores port til localhosten
+
+const path = require('path');
+app.use(express.static(path.join(__dirname, 'src/assets')));
+
+app.use(express.json());
+
+const hbs = create({ extname: '.hbs' });
+// Registrerer Handlebars som Express' template engine
+app.engine('.hbs', hbs.engine);
+// Angiver .hbs som standardvisningsformat
+app.set('view engine', '.hbs');
+// Angiver mappen med Handlebars-visninger
+app.set('views', 'src/views');
+
+app.use('/', pageRoutes);
+
+app.use("/", productPages)
+
+app.use("/", authRoutes);
+
 const PORT = process.env.PORT || 3000;
-
-app.get('/', (req, res) => {
-  res.send('GameCreators webshop kører');
-});
-
-// det er bare en lokalserver lige nu indtil vi løser hosting
 
 app.listen(PORT, () => {
   console.log(`Server kører på http://localhost:${PORT}`);

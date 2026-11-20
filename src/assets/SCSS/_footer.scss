@@ -1,0 +1,46 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'base' as *;
+
+.footer {
+    background-color: $color-nintendo-red;
+    display: flex;
+    justify-content: space-between;
+    color: $color-macintosh-beige;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+p {
+    font-family: $font-montserrat;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    max-width: 10rem;
+  }
+
+.footer__headline {
+  font-family: $font-montserrat;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.footer__container__left {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__container__middle_left {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__container__middle_right {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__container__right {
+  display: flex;
+  flex-direction: column;
+}
