@@ -143,6 +143,13 @@ nav {
   padding-right: 2rem;
 }
 
+p {
+  font-family: "montserrat";
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  max-width: 10rem;
+}
+
 .footer__headline {
   font-family: "montserrat";
   font-size: 1.2rem;
