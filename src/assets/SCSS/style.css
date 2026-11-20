@@ -132,4 +132,40 @@ nav {
   border: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
+}
+
+.footer {
+  background-color: #8C2C2B;
+  display: flex;
+  justify-content: space-between;
+  color: #F3E3D1;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.footer__headline {
+  font-family: "montserrat";
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.footer__container__left {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__container__middle_left {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__container__middle_right {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__container__right {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=style.css.map */
