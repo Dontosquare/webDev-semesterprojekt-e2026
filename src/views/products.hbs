@@ -1,16 +1,35 @@
-<h1>Dette er vores products</h1>
+{{> header}}
+<div class="title">
+    <h1>Alle produkter</h1>
+</div>
 
-<div class="product-card">
+<div class="products-container">
     {{#each products}}
-    <!-- Change path for src -->
-    <img src="/src/assets/images/" alt="{{name}}">
-    <p>{{price}}.- DKK</p>
-    <p>{{name}}</p>
-    <p>{{description}}</p>
+    <div class="product-card">
+        <div class="card-image">
+            <!-- Change path for src -->
+            <img src="/images/products/test-image.jpg" alt="{{name}}">
+        </div>
+        <div class="card-price">
+            <p>{{price}}.- DKK</p>
+        </div>
+        <div class="card-description">
+            <p>{{name}}</p>
+            <p>{{description}}</p>
+        </div>
 
-    <div>
-        <p>På lager 30+ stk.</p>
-        <button>Tilføj til kurv</button>
+        <div class="card-footer">
+            <div class="stock-status">
+                <!-- Add logic when stock is implemented -->
+                <span class="status-ball green"></span>
+                <p>På lager 30+ stk.</p>
+            </div>
+            <button>Tilføj til kurv</button>
+        </div>
     </div>
     {{/each}}
 </div>
+<div class="show-more-container">
+    <button>Vis mere</button>
+</div>
+{{> footer}}
