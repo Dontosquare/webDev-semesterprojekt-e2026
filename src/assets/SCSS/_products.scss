@@ -41,11 +41,21 @@
     margin-bottom: 5px;
 }
 
+.card-description {
+    width: 100%;
+    max-width: none;
+}
+
+.card-description p {
+    width: 100%;
+    max-width: none;
+}
 .card-description p:first-child {
     font-size: 1.1rem;
     font-weight: 500;
     margin-bottom: 5px;
 }
+
 
 .card-footer {
     margin-top: auto;
