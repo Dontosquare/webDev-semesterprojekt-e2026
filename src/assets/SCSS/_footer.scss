@@ -1,0 +1,29 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'base' as *;
+
+.footer {
+    background-color: $color-nintendo-red;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+.footer__container__left {
+  display: flex;
+}
+
+.footer__container__middle_left {
+  display: flex;
+}
+
+.footer__container__middle_right {
+  display: flex;
+}
+
+.footer__container__right {
+  display: flex;
+}
