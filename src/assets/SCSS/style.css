@@ -269,6 +269,10 @@ p {
   display: inline-block;
 }
 
+.stock-status p {
+  margin: 0;
+}
+
 .green {
   background-color: #15FF00;
 }
