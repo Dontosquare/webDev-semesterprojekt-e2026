@@ -5,13 +5,9 @@ const getAllProducts = async (req, res) => {
 
     const page = Number(req.query.page) || 1
     const pageSize = Number(req.query.pageSize) || 10
-    const search = req.query.search
-
-    try {
         where = {}
-        if (search) {
-            where = { name: { [Op.substring]: search } }
-        }
+
+        try {
 
         const { count, rows } = await Product.findAndCountAll({
             where,
@@ -30,6 +26,23 @@ const getAllProducts = async (req, res) => {
             totalPages,
         })
     } catch (error) {
+        res.status(500).json({ error: error.message })
+    }
+}
+
+const search = async (req, res) => {
+    const search = req.query.search
+        try {
+            where = {}
+
+            if (search) {
+                where = { name: { [Op.substring]: search } }
+            }
+            const products = await Product.findAll({ where, raw: true })
+            res.json(products)
+    }
+    
+     catch (error) {
         res.status(500).json({ error: error.message })
     }
 }
@@ -83,4 +96,4 @@ const deleteProduct = async (req, res) => {
     }
 }
 
-module.exports = { getAllProducts, getProductById, createProduct, updateProduct, deleteProduct }
+module.exports = { getAllProducts, search, getProductById, createProduct, updateProduct, deleteProduct }
