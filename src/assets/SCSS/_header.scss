@@ -56,10 +56,12 @@ nav {
   border-radius: 25px;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  padding-right: 20rem;
+  padding-right: 1rem;
   padding-left: 1rem;
+  width: 32rem;
   border: none;
 }
+
 
 .header__input::placeholder {
   font-family: $font-montserrat;
