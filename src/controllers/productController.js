@@ -31,7 +31,7 @@ const getAllProducts = async (req, res) => {
 }
 
 const search = async (req, res) => {
-    const search = req.query.search
+    const search = req.query.q
         try {
             where = {}
 
@@ -39,7 +39,7 @@ const search = async (req, res) => {
                 where = { name: { [Op.substring]: search } }
             }
             const products = await Product.findAll({ where, raw: true })
-            res.json(products)
+            res.render("products", { products })
     }
     
      catch (error) {
