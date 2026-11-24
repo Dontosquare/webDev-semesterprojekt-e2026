@@ -1,0 +1,79 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'base' as *;
+
+.aboutHeading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 2.5rem 7.5rem 2.5rem 7.5rem;
+    img {
+        width: 15rem;
+        height: auto;
+    }
+    h1{
+        font-family: "montserrat";
+        font-size: 2rem;
+        font-weight: bold;
+    }
+}
+
+.aboutText {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-macintosh-beige;
+    font-weight: bold;
+    p{
+        margin: 2.5rem 12.5rem 2.5rem 12.5rem;
+        max-width: fit-content;
+    }
+}
+
+.aboutContact{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 2.5rem 12.5rem 5rem 12.5rem;
+    .aboutContactImage{
+        display: block;
+        width: 25rem;
+        height: 15rem;
+        background-color: $color-macintosh-beige;
+        border-radius: 25px;
+    }
+    .aboutContactBlock{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: 1rem 1rem;
+        width: 25rem;
+        height: 15rem;
+        background-color: $color-macintosh-beige;
+        border-radius: 25px;
+        p{
+            font-family: "montserrat";
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: center;
+            max-width: fit-content;
+            padding: 0 1rem;
+        }
+        a{
+            font-family: "montserrat";
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: $color-ghost-white;
+            background-color: $color-nintendo-red;
+            padding: 1.5rem 5rem;
+            border-radius: 25px;
+        }
+    }
+}
