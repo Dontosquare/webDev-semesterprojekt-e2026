@@ -6,7 +6,10 @@ const getOrders = async( req, res) => {
     try {
         
         const orders = await Order.findAll({
-            order: [["createdAt", "DESC"]]
+            order: [["createdAt", "DESC"]],
+            include: [
+                 { model: User }
+            ]
         });
         res.render("admin", {orders})
     } catch (error) {
@@ -14,6 +17,16 @@ const getOrders = async( req, res) => {
     }
 }
 
+
+const postOrders = async( req, res) => {
+    try {
+        const { timeOfPurchase, invoiceNumber } = req.body
+        const postOrder = await Order.create({ timeOfPurchase, invoiceNumber })
+        res.status(201).json(order)
+    } catch (error) {
+        res.status(400).json({ error: error.message })
+    }
+}
 module.exports = { getOrders }
 
 
