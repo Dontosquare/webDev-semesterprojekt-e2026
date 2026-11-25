@@ -16,7 +16,7 @@ const register = async (req, res) => {
 
     const role = await Role.findOne({ where: { name: "User" } })
 
-    await User.create({ email, hashedPassword: hashedPassword, roleId: role.id })
+    await User.create({ email, hashedPassword: hashedPassword, adress, username, postcode, city, phone, roleId: role.id })
     // Også ændre på redirect her
     res.redirect("/")
 
