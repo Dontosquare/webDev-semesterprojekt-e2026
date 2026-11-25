@@ -1,0 +1,133 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'base' as *;
+
+.contact-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-batman-black;
+    height: 35rem;
+    width: 100%;
+    p{
+        font-family: "montserrat";
+        font-size: 2rem;
+        font-weight: bold;
+    }
+}
+
+.contact-heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+    gap: 1rem;
+    width: 45%;
+    height: 20rem;
+    margin: auto auto -10rem auto;
+    background-color: $color-macintosh-beige;
+    border-radius: 25px;
+    h1{
+        font-family: "montserrat";
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    p{
+        width: 80%;
+        max-width: fit-content;
+        font-family: "lato";
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: auto;
+    padding: 2rem 2rem;
+    p{
+        font-family: "lato";
+        font-size: 1.2rem;
+        font-weight: bold;
+        max-width: fit-content;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        width: 35%;
+        font-family: "lato";
+        .honeypot{
+            display: none;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            width: 100%;
+            label {
+                font-family: "lato";
+                font-size: 1.2rem;
+                font-weight: bold;
+                text-align: center;
+            }
+            input, textarea {
+                width: 100%;
+                padding: 0.5rem 1rem;
+                border-radius: 25px;
+                border: none;
+                background-color: $color-macintosh-beige;
+                font-family: "lato";
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+            textarea {
+                resize: vertical;
+            }
+        }
+        button{
+            padding: 0.75rem 2.5rem;
+            border-radius: 25px;
+            border: none;
+            background-color: $color-nintendo-red;
+            color: $color-macintosh-beige;
+            font-family: "lato";
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    }
+}
+
+.contact-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 2.5rem auto 5rem auto;
+    div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $color-macintosh-beige;
+        border-color: $color-nintendo-red;
+        border-style: solid;
+        border-width: 1px;
+        padding: 1rem 2rem;
+        border-radius: 25px;
+    }
+    p{
+        font-family: "lato";
+        color: $color-nintendo-red;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-align: center;
+        margin: 0;
+    }
+}

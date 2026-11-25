@@ -1,16 +1,44 @@
-<div class="contact-card">
+{{> header}}
+<div class="contact-image">
+  <p>INDSÆT BILLEDE HER</p>
+</div>
+<div class="contact-heading">
   <h1>Kontakt os</h1>
+  <p>Har du spørgsmål til en konsol, brug for hjælp til at finde en bestemt klassiker, eller vil du bare snakke retro? Skriv til os, så vender vi tilbage hurtigst muligt. Hos Gamecreators ved vi, at den rigtige konsol betyder noget, og vi hjælper dig gerne hele vejen i mål.</p>
+</div>
+<div class="contact-card">
   <p>Send os en besked via formularen.</p>
   {{#if success}}<div class="success" role="status">{{success}}</div>{{/if}}
   {{#if error}}<div class="error" role="alert">{{error}}</div>{{/if}}
   <form action="/send" method="POST">
     <div class="honeypot" aria-hidden="true"><label for="website">Website</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
-    <label for="name">Navn</label>
-    <input id="name" name="name" value="{{form.name}}" minlength="2" maxlength="100" required>
-    <label for="email">E-mail</label>
-    <input type="email" id="email" name="email" value="{{form.email}}" maxlength="254" required>
-    <label for="message">Besked</label>
-    <textarea id="message" name="message" rows="6" minlength="10" maxlength="5000" required>{{form.message}}</textarea>
+    
+    <div class="form-group">
+      <label for="name">Navn</label>
+      <input id="name" name="name" value="{{form.name}}" minlength="2" maxlength="100" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" value="{{form.email}}" maxlength="254" required>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Besked</label>
+      <textarea id="message" name="message" rows="6" minlength="10" maxlength="5000" required>{{form.message}}</textarea>
+    </div>
+
     <button type="submit">Send besked</button>
   </form>
 </div>
+
+<div class="contact-info">
+  <div>
+    <p>+45 00 00 00 00</p>
+  </div>
+  <div>
+    <p>gamecreators@gmail.com</p>
+  </div>
+</div>
+
+{{> footer}}
