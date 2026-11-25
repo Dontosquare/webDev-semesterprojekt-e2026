@@ -18,10 +18,6 @@ module.exports = {
       price: {
         type: Sequelize.DECIMAL
       },
-      color: {
-        type: Sequelize.STRING,
-        allowNull: true
-      },
       description: {
         type: Sequelize.STRING
       },
@@ -43,6 +39,26 @@ module.exports = {
         allowNull: true,
         references: {
           model: "Categories",
+          key: "id"
+        },
+        onUpdate: "CASCADE",
+        onDelete: "SET NULL"
+      },
+      colorId: {
+        type: Sequelize.INTEGER,
+        allowNull: true,
+        references: {
+          model: "Colors",
+          key: "id"
+        },
+        onUpdate: "CASCADE",
+        onDelete: "SET NULL"
+      },
+      conditionId: {
+        type: Sequelize.INTEGER,
+        allowNull: true,
+        references: {
+          model: "Condition",
           key: "id"
         },
         onUpdate: "CASCADE",
