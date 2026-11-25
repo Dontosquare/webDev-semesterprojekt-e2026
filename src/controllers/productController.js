@@ -1,25 +1,31 @@
-const { Product } = require("../models")
+const { Product, Color, Brand, Category, Condition, Stock } = require("../models")
 const { Op } = require("sequelize")
 
 const getAllProducts = async (req, res) => {
 
     const page = Number(req.query.page) || 1
     const pageSize = Number(req.query.pageSize) || 10
-        where = {}
+    const where = {}
 
-        try {
+    try {
 
         const { count, rows } = await Product.findAndCountAll({
             where,
+            include: [
+                { model: Color },
+                { model: Brand },
+                { model: Category },
+                { model: Condition },
+                { model: Stock },
+            ],
             order: [["createdAt", "DESC"]],
             limit: pageSize,
             offset: (page - 1) * pageSize,
-            raw: true,
         })
         const totalPages = Math.ceil(count / pageSize)
 
         res.render("products", {
-            products: rows,
+            products: rows.map((p) => p.get({ plain: true })),
             page,
             pageSize,
             totalItems: count,
@@ -32,17 +38,17 @@ const getAllProducts = async (req, res) => {
 
 const search = async (req, res) => {
     const search = req.query.q
-        try {
-            where = {}
+    try {
+        where = {}
 
-            if (search) {
-                where = { name: { [Op.substring]: search } }
-            }
-            const products = await Product.findAll({ where, raw: true })
-            res.render("products", { products })
+        if (search) {
+            where = { name: { [Op.substring]: search } }
+        }
+        const products = await Product.findAll({ where, raw: true })
+        res.render("products", { products })
     }
-    
-     catch (error) {
+
+    catch (error) {
         res.status(500).json({ error: error.message })
     }
 }

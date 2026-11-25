@@ -15,7 +15,8 @@ module.exports = (sequelize, DataTypes) => {
       Product.belongsTo(models.Brand, { foreignKey: "brandId" })
       Product.belongsTo(models.Color, { foreignKey: "colorId" })
       Product.belongsTo(models.Condition, { foreignKey: "conditionId" })
-      Product.hasMany(models.images, { foreignKey: "imageId" })
+      Product.hasMany(models.Image, { foreignKey: "productId" })
+      Product.hasOne(models.Stock, {foreignKey: "productId"})
     }
   }
   Product.init({

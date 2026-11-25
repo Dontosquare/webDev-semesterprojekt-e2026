@@ -9,14 +9,14 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      ImagePath: {
+      imagePath: {
         type: Sequelize.STRING
       },
-      imageId: {
+      productId: {
         type: Sequelize.INTEGER,
         allowNull: true,
         references: {
-          model: "Image",
+          model: "Products",
           key: "id"
         },
         onUpdate: "CASCADE",

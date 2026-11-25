@@ -21,8 +21,13 @@
         <div class="card-footer">
             <div class="stock-status">
                 <!-- Add logic when stock is implemented -->
+                {{#if Stock.quantity}}
                 <span class="status-ball green"></span>
-                <p>På lager 30+ stk.</p>
+                <p>På lager {{Stock.quantity}} stk.</p>
+                {{else}}
+                <span class="status-ball red"></span>
+                <p>Ikke på lager</p>
+                {{/if}}
             </div>
             <button>Tilføj til kurv</button>
         </div>
