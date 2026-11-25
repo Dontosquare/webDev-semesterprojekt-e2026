@@ -1,3 +1,18 @@
 @use 'variables' as *;
 @use 'mixins' as *;
 @use 'base' as *;
+
+.home__herosection__container {
+    background-color: $color-macintosh-beige;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.home__popular {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}

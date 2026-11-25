@@ -1,7 +1,117 @@
 <body>
   {{> header}}
   <main>
-    <h1>Dette er vores forside</h1>
+    <div class="home__herosection__container">
+      <p>Nyhed!</p>
+      <h2>playstation 3, Sonys titan</h2>
+      <p>PlayStation 3 er konsollen, der gav os HD-spil og online multiplayer i stuen. 
+        Med blockbusters som Uncharted, The Last of Us og God of War III er den stadig en favorit blandt både samlere og nye spillere, 
+        der vil opleve en af de bedste spilgenerationer nogensinde. 
+        Hver konsol hos os er gennemtestet, så den er klar til mange timers underholdning.</p>
+      <button>læs mere</button>
+      <button>køb nu</button>
+    </div>
+
+    <div class="home__popular">
+      <h2>populært lige nu</h2>
+      <article class="product-card">
+        <img src="n64.png" alt="Nintendo 64 konsol med controller">
+
+        <h3>Nintendo 64 - God stand<br>2 controllers inkl.</h3>
+
+        <div class="price-row">
+          <span class="price">950.- DKK</span>
+          <a href="#" class="btn">Se mere</a>
+        </div>
+
+        <p class="stock">
+          <span class="stock-dot"></span>
+          På lager 10+
+        </p>
+      </article>
+      <article class="product-card">
+        <img src="n64.png" alt="Nintendo 64 konsol med controller">
+
+        <h3>Nintendo 64 - God stand<br>2 controllers inkl.</h3>
+
+        <div class="price-row">
+          <span class="price">950.- DKK</span>
+          <a href="#" class="btn">Se mere</a>
+        </div>
+
+        <p class="stock">
+          <span class="stock-dot"></span>
+          På lager 10+
+        </p>
+      </article>
+      <article class="product-card">
+        <img src="n64.png" alt="Nintendo 64 konsol med controller">
+
+        <h3>Nintendo 64 - God stand<br>2 controllers inkl.</h3>
+
+        <div class="price-row">
+          <span class="price">950.- DKK</span>
+          <a href="#" class="btn">Se mere</a>
+        </div>
+
+        <p class="stock">
+          <span class="stock-dot"></span>
+          På lager 10+
+        </p>
+      </article>
+    </div>
+
+    <div>
+      <section class="categories">
+    <a href="#" class="category">
+      <img src="konsoller.jpg" alt="Retro konsoller på et tv-bord">
+      <h2>Konsoller</h2>
+    </a>
+
+    <a href="#" class="category">
+      <img src="hdmi.jpg" alt="HDMI-kabler">
+      <h2>Diverse</h2>
+    </a>
+
+    <a href="#" class="category">
+      <img src="merch.jpg" alt="Gamer t-shirt">
+      <h2>Merch</h2>
+    </a>
+
+    <a href="#" class="category">
+      <img src="spil.jpg" alt="Hylde fyldt med spil">
+      <h2>Spil</h2>
+    </a>
+      </section>
+    </div>
+
+    <div>
+      <section class="reviews">
+        <article class="review">
+          <h3>Frank</h3>
+            <p>Hurtig levering og i god stand! Det er mit nye foretrukne sted at købe retro</p>
+          <div class="stars-box">
+            <span class="stars" style="--rating: 5" role="img" aria-label="5 ud af 5 stjerner">★★★★★</span>
+          </div>
+        </article>
+
+      <article class="review">
+        <h3>Mikkel</h3>
+        <p>Havde et problem med min konsol efter nogle uger, heldigvis har de god garanti og hurtig service</p>
+        <div class="stars-box">
+          <span class="stars" style="--rating: 5" role="img" aria-label="5 ud af 5 stjerner">★★★★★</span>
+        </div>
+      </article>
+
+      <article class="review">
+          <h3>Marc</h3>
+          <p>Jeg savner lidt noget mere Batman relateret, men ellers er det en fed webshop!</p>
+          <div class="stars-box">
+            <span class="stars" style="--rating: 4.5" role="img" aria-label="4,5 ud af 5 stjerner">★★★★★</span>
+          </div>
+      </article>
+      </section>
+    </div>
   </main>
   {{> footer}}
 </body>
