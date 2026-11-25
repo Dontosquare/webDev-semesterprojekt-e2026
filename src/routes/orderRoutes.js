@@ -1,5 +1,6 @@
 const express = require("express")
 const router = express.Router()
-const { getOrders } = require ("../controllers/orderController")
+const { getOrders, postOrders } = require ("../controllers/orderController")
 
-router.get("/orders", getOrders)
+router.get("/admin", getOrders)
+router.post("/orders", postOrders)

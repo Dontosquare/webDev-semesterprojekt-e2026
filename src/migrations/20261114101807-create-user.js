@@ -31,10 +31,11 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       roleId: {
+        allowNull: false,
         type: Sequelize.INTEGER,
         references: { model: 'Roles', key: 'id' },
         onUpdate: 'CASCADE',
-        onDelete: 'SET NULL'
+        onDelete: 'RESTRICT'
       },
       createdAt: {
         allowNull: false,
