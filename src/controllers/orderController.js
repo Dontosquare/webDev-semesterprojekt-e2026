@@ -10,7 +10,7 @@ const getOrders = async( req, res) => {
         });
         res.render("admin", {orders})
     } catch (error) {
-        
+        res.status(400).json({ error: error.message })
     }
 }
 
