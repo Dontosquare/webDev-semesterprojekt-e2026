@@ -336,8 +336,28 @@ p {
   font-weight: bold;
 }
 
-button:hover {
+.card-footer button:hover {
+  background-color: rgb(108.7868852459, 34.1901639344, 33.4131147541);
   cursor: pointer;
+}
+
+.show-more-container button:hover {
+  background-color: rgb(108.7868852459, 34.1901639344, 33.4131147541);
+  cursor: pointer;
+}
+
+.product-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-card {
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
 }
 
 .aboutHeading {

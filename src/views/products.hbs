@@ -6,18 +6,19 @@
 <div class="products-container">
     {{#each products}}
     <div class="product-card">
-        <div class="card-image">
-            <!-- Change path for src -->
-            <img src="/images/products/test-image.jpg" alt="{{name}}">
-        </div>
-        <div class="card-price">
-            <p>{{price}}.- DKK</p>
-        </div>
-        <div class="card-description">
-            <p>{{name}}</p>
-            <p>{{description}}</p>
-        </div>
-
+        <a href="/products/{{id}}" class="product-link">
+            <div class="card-image">
+                <!-- Change path for src -->
+                <img src="/images/products/test-image.jpg" alt="{{name}}">
+            </div>
+            <div class="card-price">
+                <p>{{price}}.- DKK</p>
+            </div>
+            <div class="card-description">
+                <p>{{name}}</p>
+                <p>{{description}}</p>
+            </div>
+        </a>
         <div class="card-footer">
             <div class="stock-status">
                 <!-- Add logic when stock is implemented -->
