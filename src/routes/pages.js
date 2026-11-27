@@ -10,6 +10,7 @@ router.get('/product', (req, res) => res.render('product'));
 router.get('/about', (req, res) => res.render('about'));
 router.get('/contact', (req, res) => res.render('contact'));
 router.get('/admin', (req, res) => res.render('admin'));
+router.get('/basket', (req, res) => res.render('basket'));
 
 // Eksporterer routes, så vi kan bruge den i app.js
 module.exports = router;

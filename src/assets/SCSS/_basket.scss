@@ -1,0 +1,51 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'base' as *;
+
+.basket-title{
+    text-align: center;
+    font-family: "montserrat";
+}
+
+.basket-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background-color: $color-macintosh-beige;
+    .basket-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        margin: 2rem;
+        height: 20rem;
+        padding: 2rem 2rem;
+        width: 60%;
+        background-color: $color-ghost-white;
+        border-color: $color-nintendo-red;
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 25px;
+        .basket-image{
+            width: 15rem;
+            height: 100%;
+            object-fit: contain;
+        }
+        .basket-item-details {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            width: 100%;
+            .basket-item.description {
+                font-family: "lato";
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+        }
+    }
+}
