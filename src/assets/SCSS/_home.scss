@@ -4,10 +4,23 @@
 
 .home__herosection__container {
     background-color: $color-macintosh-beige;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    border-radius: 25px;
+}
+
+.home__herosection__news {
+    $font-montserrat: "montserrat";
+    background-color: $color-nintendo-red;
+    color: $color-macintosh-beige;
+    max-width: 10rem;
+    border-top-left-radius: 25px;
+    font-size: 36px;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
 }
 
 .home__popular {
@@ -16,3 +29,4 @@
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
+
