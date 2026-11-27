@@ -360,6 +360,53 @@ p {
   transform: translateY(-4px);
 }
 
+.product-container {
+  font-family: "montserrat";
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 0.8fr);
+  margin: 3rem;
+}
+
+.product-image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-image-section img {
+  width: auto;
+  height: 220px;
+}
+
+.product-information-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.purchase-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.purchase-section p {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.button-container button {
+  display: flex;
+  color: #FFFFFF;
+  background-color: #8C2C2B;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.3rem;
+  padding: 10px 40px;
+  font-weight: bold;
+}
+
 .aboutHeading {
   display: flex;
   flex-direction: row;

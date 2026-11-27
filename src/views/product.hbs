@@ -1,6 +1,38 @@
 {{> header}}
 <div class="product-container">
-    <h1>{{product.name}} - {{Condition.id}}</h1>
-    
+
+    <div class="product-image-section">
+        <img src="/images/products/test-image.jpg" alt="{{product.name}}">
+    </div>
+
+    <div class="product-information-section">
+        <h1>{{product.name}} - {{product.Condition.name}}</h1>
+
+        <p>{{product.description}}</p>
+
+        <ul> Dette medfølger i din ordre:
+            <li>1 Nintendo 64</li>
+            <li>2 Nintendo 64</li>
+            <li>Strømadapter</li>
+            <li>Videokabel</li>
+        </ul>
+
+        <p>
+            (OBS. Hvis original kabler har været skadet
+            kan vi være forudsaget til at skifte dem ud med vores egne fra lager)
+        </p>
+    </div>
+
+    <div class="other-images-section">
+        <img src="" alt="">
+    </div>
+
+    <div class="purchase-section">
+        <p>{{product.price}}.- DKK</p>
+        <div class="button-container">
+            <button>Tilføj til kurv</button>
+        </div>
+    </div>
+
 </div>
 {{> footer}}

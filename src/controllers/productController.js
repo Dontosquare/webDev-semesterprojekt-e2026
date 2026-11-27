@@ -55,11 +55,21 @@ const search = async (req, res) => {
 
 const getProductById = async (req, res) => {
     try {
-        const product = await Product.findByPk(req.params.id, { raw: true })
+        const product = await Product.findByPk(req.params.id, {
+            include: [
+                { model: Color },
+                { model: Brand },
+                { model: Category },
+                { model: Condition },
+                { model: Stock },
+            ],
+        }
+
+        )
         if (!product) {
             return res.status(404).json({ error: "Product not found" })
         }
-        res.render("product", { product })
+        res.render("product", { product: product.get({ plain: true }) })
     } catch (error) {
         res.status(500).json({ error: error.message })
     }
